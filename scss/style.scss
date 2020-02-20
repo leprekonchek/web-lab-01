@@ -1,0 +1,385 @@
+@import "normalize";
+
+// -- MIXINS & COLORS--
+
+@mixin exo-thin {
+  font-family: 'Exo', sans-serif;
+  font-weight: 100;
+}
+
+@mixin exo-regular {
+  font-family: 'Exo', sans-serif;
+  font-weight: 400;
+}
+
+@mixin exo-medium {
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+}
+
+$color-white: white;
+$color-red: #ff6d6d;
+$color-dark-gray: #282828;
+$color-light: #f6f5f3;
+
+// -- GENERAL --
+* {
+  box-sizing: border-box;
+}
+
+.section-outer {
+}
+
+.section-inner {
+  margin: 0 auto;
+  width: 1180px;
+}
+
+
+// -- HEADER --
+
+.section-header {
+  background: url('../images/screen1.png') no-repeat 50% 50%;
+  background-size: cover;
+
+  .section-inner {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+  }
+
+  &-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &-wrapper {
+    margin: 0 auto;
+
+    &__title,
+    &__play-button,
+    &__try-button,
+    &__button-description {
+      text-align: center;
+    }
+
+    &__title {
+      @include exo-thin;
+      width: 60%;
+      font-size: 60px;
+      margin: 0 auto 45px;
+    }
+
+    &__play-button {
+      margin-bottom: 40px;
+      cursor: pointer;
+
+      img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+
+    &__try-button {
+      @include exo-regular;
+      font-size: 16px;
+
+      button {
+        cursor: pointer;
+        width: 190px;
+        height: 50px;
+        letter-spacing: 3px;
+        margin: 0;
+        padding: 15px 40px;
+        border: none;
+        border-radius: 3px;
+        background: $color-red;
+        color: $color-white;
+
+      }
+    }
+
+    &__button-description {
+      @include exo-regular;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+  }
+}
+
+
+// -- INFO --
+
+.section-info {
+  display: flex;
+
+  &-wrapper {
+    display: flex;
+  }
+
+  &-content {
+    padding: 190px 130px 170px 150px;
+    @include exo-medium;
+
+    .pretitle {
+      font-size: 16px;
+      color: $color-red;
+      padding-bottom: 13px;
+    }
+
+    .title {
+      font-size: 40px;
+      color: $color-dark-gray;
+      display: inline;
+    }
+
+    .dots {
+      display: inline;
+      color: $color-red;
+      font-size: 40px;
+    }
+
+    .text {
+      padding-top: 50px;
+      font-size: 16px;
+      line-height: 26px;
+      color: $color-dark-gray;
+      opacity: 0.66;
+    }
+  }
+
+  &-image {
+    img {
+      height: fit-content;
+    }
+  }
+
+}
+
+//// ---- MEDIA INFO
+//@media (max-width: 768px) {
+//  .section-info-image {
+//    img {
+//      display: none;
+//    }
+//  }
+//}
+
+
+// -- FEATURES --
+.section-features {
+  background: $color-light;
+}
+
+// -- DESIGN --
+
+.section-design {
+  background: url('../images/screen4.png') no-repeat;
+
+  &-content {
+
+    display: flex;
+    @include exo-medium;
+
+    &__image {
+      padding: 90px 0;
+    }
+
+    &__text {
+      padding-top: 140px;
+      padding-right: 50px;
+      padding-left: 50px;
+      padding-bottom: 140px;
+
+      .pretitle {
+        font-size: 16px;
+        color: $color-red;
+        padding-bottom: 25px;
+        letter-spacing: 3px;
+      }
+
+      .title {
+        font-size: 40px;
+        color: $color-dark-gray;
+        display: inline;
+      }
+
+      .dots {
+        display: inline;
+        color: $color-red;
+        font-size: 40px;
+      }
+
+      .text {
+        margin-top: 30px;
+        font-size: 16px;
+        line-height: 26px;
+        color: $color-dark-gray;
+        opacity: 0.66;
+      }
+    }
+  }
+}
+
+
+// -- REVIEWS --
+
+
+// -- NEW FEATURES --
+
+.section-new-features {
+  background-color: $color-light;
+
+  .section-inner {
+    display: flex;
+  }
+
+  &-wrapper {
+    @include exo-medium;
+
+    &__pretitle,
+    &__title,
+    &__text,
+    &__image {
+      text-align: center;
+    }
+
+    &__pretitle {
+      font-size: 16px;
+      letter-spacing: 3px;
+      color: $color-red;
+      margin-top: 100px;
+    }
+
+    &__title {
+      font-size: 40px;
+      line-height: 50px;
+      color: $color-dark-gray;
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      font-size: 16px;
+      line-height: 26px;
+      color: $color-dark-gray;
+      opacity: 0.66;
+      width: 55%;
+      margin: 0 auto 90px;
+    }
+
+    &__image {
+    }
+
+  }
+}
+
+
+// -- FORM --
+
+.section-form {
+  background: #323969;
+
+  .section-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &-wrapper {
+    margin: 0 auto;
+
+    &__pretitle,
+    &__title,
+    &__tip,
+    &__form,
+    &__subtitle {
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      @include exo-regular;
+    }
+
+    &__pretitle {
+      @include exo-medium;
+      letter-spacing: 3px;
+      color: $color-red;
+      margin-top: 100px;
+      margin-bottom: 10px;
+    }
+
+    &__title {
+      @include exo-medium;
+      font-size: 40px;
+    }
+
+    &__tip {
+      div, img {
+        display: inline;
+      }
+
+      div {
+        padding-bottom: 42px;
+        position: absolute;
+      }
+
+      img {
+        padding-bottom: 17px;
+        padding-right: 10px;
+        padding-top: 5px;
+      }
+
+      padding-top: 42px;
+      padding-left: 57%;
+    }
+
+    &__form {
+      display: flex;
+
+      &-input {
+        flex: 1;
+        padding-right: 30px;
+
+        input {
+          width: 100%;
+          border: rgba(255, 255, 255, .5) 1px solid;
+          border-radius: 3px;
+          background: rgba(255, 255, 255, .1);
+          padding: 20px 28px;
+
+          &::placeholder {
+            color: #ffffff;
+          }
+        }
+      }
+
+      &-button {
+        button {
+          cursor: pointer;
+          border: none;
+          border-radius: 3px;
+          background: $color-red;
+          padding: 20px 90px;
+          color: white;
+        }
+      }
+    }
+
+    &__subtitle {
+      opacity: 0.6;
+      margin-top: 53px;
+      margin-bottom: 85px;
+    }
+
+  }
+
+}
+
+
+// -- FOOTER --
