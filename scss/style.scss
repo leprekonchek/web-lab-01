@@ -330,7 +330,8 @@ button:hover {
       text-align: center;
     }
 
-    &__pretitle {
+    .pretitle {
+      text-align: center;
       margin-top: 100px;
     }
 
@@ -375,7 +376,6 @@ button:hover {
   &-wrapper {
     margin: 0 auto;
 
-    &__pretitle,
     &__title,
     &__tip,
     &__form,
@@ -386,7 +386,8 @@ button:hover {
       @include exo-regular;
     }
 
-    &__pretitle {
+    .pretitle {
+      text-align: center;
       margin-top: 100px;
       margin-bottom: 10px;
     }

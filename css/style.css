@@ -493,7 +493,8 @@ button:hover {
     font-weight: 500; }
     .section-new-features-wrapper__title, .section-new-features-wrapper__text, .section-new-features-wrapper__image {
       text-align: center; }
-    .section-new-features-wrapper__pretitle {
+    .section-new-features-wrapper .pretitle {
+      text-align: center;
       margin-top: 100px; }
     .section-new-features-wrapper__title {
       font-size: 40px;
@@ -518,13 +519,14 @@ button:hover {
     align-items: center; }
   .section-form-wrapper {
     margin: 0 auto; }
-    .section-form-wrapper__pretitle, .section-form-wrapper__title, .section-form-wrapper__tip, .section-form-wrapper__form, .section-form-wrapper__subtitle {
+    .section-form-wrapper__title, .section-form-wrapper__tip, .section-form-wrapper__form, .section-form-wrapper__subtitle {
       text-align: center;
       color: white;
       font-size: 16px;
       font-family: 'Exo', sans-serif;
       font-weight: 400; }
-    .section-form-wrapper__pretitle {
+    .section-form-wrapper .pretitle {
+      text-align: center;
       margin-top: 100px;
       margin-bottom: 10px; }
     .section-form-wrapper__title {
