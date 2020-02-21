@@ -21,10 +21,33 @@ $color-white: white;
 $color-red: #ff6d6d;
 $color-dark-gray: #282828;
 $color-light: #f6f5f3;
+$color-avatar: #4e4e5e;
+
+$mobile: 'only screen and (max-width : 576px)';
+$tablet: 'only screen and (max-width : 1024px)';
+$desktop: 'only screen and (min-width : 1025px)';
 
 // -- GENERAL --
 * {
   box-sizing: border-box;
+}
+
+button:hover {
+  background: #db5f5f;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 26px;
+  color: $color-dark-gray;
+  opacity: 0.66;
+}
+
+.pretitle {
+  font-size: 16px;
+  @include exo-medium;
+  letter-spacing: 3px;
+  color: $color-red;
 }
 
 .section-outer {
@@ -124,8 +147,6 @@ $color-light: #f6f5f3;
     @include exo-medium;
 
     .pretitle {
-      font-size: 16px;
-      color: $color-red;
       padding-bottom: 13px;
     }
 
@@ -143,40 +164,68 @@ $color-light: #f6f5f3;
 
     .text {
       padding-top: 50px;
-      font-size: 16px;
-      line-height: 26px;
-      color: $color-dark-gray;
-      opacity: 0.66;
     }
   }
 
-  &-image {
-    img {
-      height: fit-content;
+  img {
+    @media #{$tablet} {
+      display: none;
     }
   }
+
 
 }
-
-//// ---- MEDIA INFO
-//@media (max-width: 768px) {
-//  .section-info-image {
-//    img {
-//      display: none;
-//    }
-//  }
-//}
 
 
 // -- FEATURES --
 .section-features {
-  background: $color-light;
+  background: url('../images/screen3.png') no-repeat 50% 50%;
+  background-size: cover;
+
+  @include exo-medium;
+  text-align: center;
+
+  &-content {
+    padding-top: 137px;
+
+    .pretitle {
+      padding-bottom: 10px;
+    }
+
+    .main-title {
+      font-size: 40px;
+      color: $color-dark-gray;
+    }
+  }
+
+
+  &-items {
+    margin-top: 80px;
+    padding-bottom: 180px;
+    display: flex;
+
+    &__item {
+      width: 30%;
+      margin: 0 30px;
+
+      .icon {
+        padding-bottom: 30px;
+      }
+
+      .title {
+        font-size: 22px;
+        color: $color-dark-gray;
+        padding-bottom: 15px;
+      }
+    }
+  }
 }
 
 // -- DESIGN --
 
 .section-design {
   background: url('../images/screen4.png') no-repeat;
+  background-size: cover;
 
   &-content {
 
@@ -188,16 +237,10 @@ $color-light: #f6f5f3;
     }
 
     &__text {
-      padding-top: 140px;
-      padding-right: 50px;
-      padding-left: 50px;
-      padding-bottom: 140px;
+      padding: 140px 50px;
 
       .pretitle {
-        font-size: 16px;
-        color: $color-red;
         padding-bottom: 25px;
-        letter-spacing: 3px;
       }
 
       .title {
@@ -214,10 +257,6 @@ $color-light: #f6f5f3;
 
       .text {
         margin-top: 30px;
-        font-size: 16px;
-        line-height: 26px;
-        color: $color-dark-gray;
-        opacity: 0.66;
       }
     }
   }
@@ -225,7 +264,53 @@ $color-light: #f6f5f3;
 
 
 // -- REVIEWS --
+.section-reviews {
+  background: url('../images/screen6.png') no-repeat;
+  background-size: cover;
 
+  &__reviews {
+    @include exo-medium;
+    display: flex;
+    text-align: center;
+
+    .review {
+      width: 25%;
+      padding-top: 110px;
+      margin: 0 51px;
+
+      .avatar {
+        margin: 0 auto;
+        width: 76px;
+        height: 76px;
+        background: $color-avatar;
+      }
+
+      .name {
+        font-size: 22px;
+        padding-top: 25px;
+        padding-bottom: 5px;
+        color: $color-white;
+      }
+
+      .position {
+        font-size: 16px;
+        color: $color-red;
+      }
+
+      .text {
+        @include exo-regular;
+        font-style: italic;
+        color: white;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  &__logos {
+    text-align: center;
+    padding: 80px 0;
+  }
+}
 
 // -- NEW FEATURES --
 
@@ -239,7 +324,6 @@ $color-light: #f6f5f3;
   &-wrapper {
     @include exo-medium;
 
-    &__pretitle,
     &__title,
     &__text,
     &__image {
@@ -247,9 +331,6 @@ $color-light: #f6f5f3;
     }
 
     &__pretitle {
-      font-size: 16px;
-      letter-spacing: 3px;
-      color: $color-red;
       margin-top: 100px;
     }
 
@@ -261,15 +342,14 @@ $color-light: #f6f5f3;
     }
 
     &__text {
-      font-size: 16px;
-      line-height: 26px;
-      color: $color-dark-gray;
-      opacity: 0.66;
       width: 55%;
       margin: 0 auto 90px;
     }
 
     &__image {
+      @media #{$tablet} {
+        display: none;
+      }
     }
 
   }
@@ -307,9 +387,6 @@ $color-light: #f6f5f3;
     }
 
     &__pretitle {
-      @include exo-medium;
-      letter-spacing: 3px;
-      color: $color-red;
       margin-top: 100px;
       margin-bottom: 10px;
     }
@@ -383,3 +460,53 @@ $color-light: #f6f5f3;
 
 
 // -- FOOTER --
+.section-footer {
+  @include exo-medium;
+  background: url('../images/screen7.png') no-repeat 50% 50%;
+  background-size: cover;
+
+  .section-inner {
+    display: flex;
+  }
+
+  &__column {
+    padding: 90px 50px;
+
+    .logo {
+    }
+
+    &-title {
+      font-size: 22px;
+    }
+
+    .text {
+      @include exo-regular;
+      font-size: 14px;
+    }
+
+    &-input {
+      display: inline;
+      padding: 18px 30px;
+
+      input {
+        width: 100%;
+        border: rgba(78, 78, 94, .1) 1px solid;
+        border-radius: 3px;
+        background: rgba(141, 141, 141, .1);
+        padding: 20px 28px;
+
+        &::placeholder {
+          color: rgba(141, 141, 141, .4);
+        }
+      }
+    }
+
+    &-button {
+      display: inline;
+    }
+
+    &-social {
+    }
+
+  }
+}

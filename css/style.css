@@ -306,6 +306,22 @@ template {
 * {
   box-sizing: border-box; }
 
+button:hover {
+  background: #db5f5f; }
+
+.text {
+  font-size: 16px;
+  line-height: 26px;
+  color: #282828;
+  opacity: 0.66; }
+
+.pretitle {
+  font-size: 16px;
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+  color: #ff6d6d; }
+
 .section-inner {
   margin: 0 auto;
   width: 1180px; }
@@ -367,8 +383,6 @@ template {
     font-family: 'Exo', sans-serif;
     font-weight: 500; }
     .section-info-content .pretitle {
-      font-size: 16px;
-      color: #ff6d6d;
       padding-bottom: 13px; }
     .section-info-content .title {
       font-size: 40px;
@@ -379,19 +393,41 @@ template {
       color: #ff6d6d;
       font-size: 40px; }
     .section-info-content .text {
-      padding-top: 50px;
-      font-size: 16px;
-      line-height: 26px;
-      color: #282828;
-      opacity: 0.66; }
-  .section-info-image img {
-    height: fit-content; }
+      padding-top: 50px; }
+  @media only screen and (max-width: 1024px) {
+    .section-info img {
+      display: none; } }
 
 .section-features {
-  background: #f6f5f3; }
+  background: url("../images/screen3.png") no-repeat 50% 50%;
+  background-size: cover;
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+  text-align: center; }
+  .section-features-content {
+    padding-top: 137px; }
+    .section-features-content .pretitle {
+      padding-bottom: 10px; }
+    .section-features-content .main-title {
+      font-size: 40px;
+      color: #282828; }
+  .section-features-items {
+    margin-top: 80px;
+    padding-bottom: 180px;
+    display: flex; }
+    .section-features-items__item {
+      width: 30%;
+      margin: 0 30px; }
+      .section-features-items__item .icon {
+        padding-bottom: 30px; }
+      .section-features-items__item .title {
+        font-size: 22px;
+        color: #282828;
+        padding-bottom: 15px; }
 
 .section-design {
-  background: url("../images/screen4.png") no-repeat; }
+  background: url("../images/screen4.png") no-repeat;
+  background-size: cover; }
   .section-design-content {
     display: flex;
     font-family: 'Exo', sans-serif;
@@ -399,15 +435,9 @@ template {
     .section-design-content__image {
       padding: 90px 0; }
     .section-design-content__text {
-      padding-top: 140px;
-      padding-right: 50px;
-      padding-left: 50px;
-      padding-bottom: 140px; }
+      padding: 140px 50px; }
       .section-design-content__text .pretitle {
-        font-size: 16px;
-        color: #ff6d6d;
-        padding-bottom: 25px;
-        letter-spacing: 3px; }
+        padding-bottom: 25px; }
       .section-design-content__text .title {
         font-size: 40px;
         color: #282828;
@@ -417,11 +447,42 @@ template {
         color: #ff6d6d;
         font-size: 40px; }
       .section-design-content__text .text {
-        margin-top: 30px;
+        margin-top: 30px; }
+
+.section-reviews {
+  background: url("../images/screen6.png") no-repeat;
+  background-size: cover; }
+  .section-reviews__reviews {
+    font-family: 'Exo', sans-serif;
+    font-weight: 500;
+    display: flex;
+    text-align: center; }
+    .section-reviews__reviews .review {
+      width: 25%;
+      padding-top: 110px;
+      margin: 0 51px; }
+      .section-reviews__reviews .review .avatar {
+        margin: 0 auto;
+        width: 76px;
+        height: 76px;
+        background: #4e4e5e; }
+      .section-reviews__reviews .review .name {
+        font-size: 22px;
+        padding-top: 25px;
+        padding-bottom: 5px;
+        color: white; }
+      .section-reviews__reviews .review .position {
         font-size: 16px;
-        line-height: 26px;
-        color: #282828;
-        opacity: 0.66; }
+        color: #ff6d6d; }
+      .section-reviews__reviews .review .text {
+        font-family: 'Exo', sans-serif;
+        font-weight: 400;
+        font-style: italic;
+        color: white;
+        padding-top: 30px; }
+  .section-reviews__logos {
+    text-align: center;
+    padding: 80px 0; }
 
 .section-new-features {
   background-color: #f6f5f3; }
@@ -430,12 +491,9 @@ template {
   .section-new-features-wrapper {
     font-family: 'Exo', sans-serif;
     font-weight: 500; }
-    .section-new-features-wrapper__pretitle, .section-new-features-wrapper__title, .section-new-features-wrapper__text, .section-new-features-wrapper__image {
+    .section-new-features-wrapper__title, .section-new-features-wrapper__text, .section-new-features-wrapper__image {
       text-align: center; }
     .section-new-features-wrapper__pretitle {
-      font-size: 16px;
-      letter-spacing: 3px;
-      color: #ff6d6d;
       margin-top: 100px; }
     .section-new-features-wrapper__title {
       font-size: 40px;
@@ -443,12 +501,11 @@ template {
       color: #282828;
       margin-bottom: 50px; }
     .section-new-features-wrapper__text {
-      font-size: 16px;
-      line-height: 26px;
-      color: #282828;
-      opacity: 0.66;
       width: 55%;
       margin: 0 auto 90px; }
+    @media only screen and (max-width: 1024px) {
+      .section-new-features-wrapper__image {
+        display: none; } }
 
 .section-form {
   background: #323969; }
@@ -468,10 +525,6 @@ template {
       font-family: 'Exo', sans-serif;
       font-weight: 400; }
     .section-form-wrapper__pretitle {
-      font-family: 'Exo', sans-serif;
-      font-weight: 500;
-      letter-spacing: 3px;
-      color: #ff6d6d;
       margin-top: 100px;
       margin-bottom: 10px; }
     .section-form-wrapper__title {
@@ -514,3 +567,32 @@ template {
       opacity: 0.6;
       margin-top: 53px;
       margin-bottom: 85px; }
+
+.section-footer {
+  font-family: 'Exo', sans-serif;
+  font-weight: 500;
+  background: url("../images/screen7.png") no-repeat 50% 50%;
+  background-size: cover; }
+  .section-footer .section-inner {
+    display: flex; }
+  .section-footer__column {
+    padding: 90px 50px; }
+    .section-footer__column-title {
+      font-size: 22px; }
+    .section-footer__column .text {
+      font-family: 'Exo', sans-serif;
+      font-weight: 400;
+      font-size: 14px; }
+    .section-footer__column-input {
+      display: inline;
+      padding: 18px 30px; }
+      .section-footer__column-input input {
+        width: 100%;
+        border: rgba(78, 78, 94, 0.1) 1px solid;
+        border-radius: 3px;
+        background: rgba(141, 141, 141, 0.1);
+        padding: 20px 28px; }
+        .section-footer__column-input input::placeholder {
+          color: rgba(141, 141, 141, 0.4); }
+    .section-footer__column-button {
+      display: inline; }
