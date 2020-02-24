@@ -325,6 +325,12 @@ button:hover {
 .section-inner {
   margin: 0 auto;
   width: 1180px; }
+  @media only screen and (max-width: 1024px) {
+    .section-inner {
+      width: 960px; } }
+  @media only screen and (max-width: 576px) {
+    .section-inner {
+      width: auto; } }
 
 .section-header {
   background: url("../images/screen1.png") no-repeat 50% 50%;
@@ -346,6 +352,7 @@ button:hover {
       font-weight: 100;
       width: 60%;
       font-size: 60px;
+      line-height: 75px;
       margin: 0 auto 45px; }
     .section-header-wrapper__play-button {
       margin-bottom: 40px;
@@ -375,10 +382,15 @@ button:hover {
       margin-top: 20px; }
 
 .section-info {
-  display: flex; }
+  display: flex;
+  background: #f6f5f3; }
+  @media only screen and (max-width: 1024px) {
+    .section-info {
+      background: white; } }
   .section-info-wrapper {
     display: flex; }
   .section-info-content {
+    background: white;
     padding: 190px 130px 170px 150px;
     font-family: 'Exo', sans-serif;
     font-weight: 500; }
@@ -394,9 +406,17 @@ button:hover {
       font-size: 40px; }
     .section-info-content .text {
       padding-top: 50px; }
-  @media only screen and (max-width: 1024px) {
-    .section-info img {
-      display: none; } }
+  .section-info .triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 480px 570px;
+    border-color: transparent transparent #fb8686 transparent;
+    margin-bottom: 0;
+    margin-top: auto; }
+    @media only screen and (max-width: 1024px) {
+      .section-info .triangle {
+        display: none; } }
 
 .section-features {
   background: url("../images/screen3.png") no-repeat 50% 50%;
@@ -425,29 +445,42 @@ button:hover {
         color: #282828;
         padding-bottom: 15px; }
 
-.section-design {
-  background: url("../images/screen4.png") no-repeat;
-  background-size: cover; }
-  .section-design-content {
-    display: flex;
-    font-family: 'Exo', sans-serif;
-    font-weight: 500; }
-    .section-design-content__image {
-      padding: 90px 0; }
-    .section-design-content__text {
-      padding: 140px 50px; }
-      .section-design-content__text .pretitle {
-        padding-bottom: 25px; }
-      .section-design-content__text .title {
-        font-size: 40px;
-        color: #282828;
-        display: inline; }
-      .section-design-content__text .dots {
-        display: inline;
-        color: #ff6d6d;
-        font-size: 40px; }
-      .section-design-content__text .text {
-        margin-top: 30px; }
+.section-design .triangle2 {
+  position: absolute;
+  z-index: -1;
+  width: 0;
+  height: 0;
+  top: 2240px;
+  border-style: solid;
+  border-width: 635px 0 0 605px;
+  border-color: transparent transparent transparent #fb8686; }
+  @media only screen and (max-width: 1024px) {
+    .section-design .triangle2 {
+      display: none; } }
+
+.section-design-content {
+  display: flex;
+  font-family: 'Exo', sans-serif;
+  font-weight: 500; }
+  .section-design-content__image {
+    padding: 90px 0; }
+    @media only screen and (max-width: 1024px) {
+      .section-design-content__image {
+        display: none; } }
+  .section-design-content__text {
+    padding: 140px 50px; }
+    .section-design-content__text .pretitle {
+      padding-bottom: 25px; }
+    .section-design-content__text .title {
+      font-size: 40px;
+      color: #282828;
+      display: inline; }
+    .section-design-content__text .dots {
+      display: inline;
+      color: #ff6d6d;
+      font-size: 40px; }
+    .section-design-content__text .text {
+      margin-top: 30px; }
 
 .section-reviews {
   background: url("../images/screen6.png") no-repeat;
@@ -572,29 +605,81 @@ button:hover {
 
 .section-footer {
   font-family: 'Exo', sans-serif;
-  font-weight: 500;
-  background: url("../images/screen7.png") no-repeat 50% 50%;
-  background-size: cover; }
+  font-weight: 500; }
   .section-footer .section-inner {
     display: flex; }
   .section-footer__column {
-    padding: 90px 50px; }
+    margin-bottom: 90px; }
+    .section-footer__column .logo {
+      margin-bottom: 10px;
+      margin-top: 80px; }
     .section-footer__column-title {
-      font-size: 22px; }
+      font-size: 22px;
+      margin-bottom: 27px;
+      margin-top: 95px; }
     .section-footer__column .text {
+      display: block;
+      font-size: 14px;
+      white-space: nowrap;
+      line-height: 30px; }
+    .section-footer__column .paragraph {
+      width: 270px;
+      font-size: 14px;
+      line-height: 26px;
+      color: #282828;
+      opacity: 0.66; }
+    .section-footer__column a {
       font-family: 'Exo', sans-serif;
       font-weight: 400;
       font-size: 14px; }
     .section-footer__column-input {
-      display: inline;
-      padding: 18px 30px; }
+      position: relative;
+      padding: 0 0 18px; }
       .section-footer__column-input input {
         width: 100%;
+        height: 51px;
         border: rgba(78, 78, 94, 0.1) 1px solid;
         border-radius: 3px;
-        background: rgba(141, 141, 141, 0.1);
-        padding: 20px 28px; }
+        background: #f6f6f6;
+        padding: 18px 28px; }
         .section-footer__column-input input::placeholder {
+          font-family: 'Exo', sans-serif;
+          font-weight: 400;
+          font-size: 16px;
           color: rgba(141, 141, 141, 0.4); }
-    .section-footer__column-button {
-      display: inline; }
+        @media only screen and (max-width: 1024px) {
+          .section-footer__column-input input {
+            width: 85%; } }
+      .section-footer__column-input button {
+        position: absolute;
+        background: url("/images/plane.png") no-repeat #ff6d6d center;
+        box-shadow: 0 3px 3px rgba(14, 15, 15, 0.25);
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        border: none;
+        border-radius: 3px;
+        color: white; }
+    .section-footer__column-social {
+      text-align: center;
+      padding-left: 40px; }
+  .section-footer .triangle3 {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 325px 332px 0;
+    border-color: transparent #fb8686 transparent transparent;
+    position: absolute;
+    right: 0;
+    z-index: -2; }
+    @media only screen and (max-width: 1024px) {
+      .section-footer .triangle3 {
+        display: none; } }
+  .section-footer .column1 {
+    padding-left: 60px; }
+  .section-footer .column2 {
+    padding-left: 40px; }
+  .section-footer .column3 {
+    padding-left: 100px; }
+  .section-footer .column4 {
+    padding-left: 90px; }
