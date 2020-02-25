@@ -24,10 +24,18 @@ $color-light: #f6f5f3;
 $color-avatar: #4e4e5e;
 
 $mobile: 'only screen and (max-width : 576px)';
+$small-tablet: 'only screen and (max-width : 768px)';
 $tablet: 'only screen and (max-width : 1024px)';
-$desktop: 'only screen and (min-width : 1025px)';
 
-// -- GENERAL --
+// 320 - 576 - 768 - 1024 - 1900
+$xsmall-max-320: '(max-width : 320px)';
+$small-max-576: '(max-width : 576px)';
+$medium-max-768: '(max-width : 768px)';
+$large-max-1024: '(max-width : 1024px)';
+$large-min-1900: '(min-width : 1900px)';
+
+
+// -- GENERAL -------------------------------------------------------------------------------------------- 0 -
 * {
   box-sizing: border-box;
 }
@@ -50,24 +58,30 @@ button:hover {
   color: $color-red;
 }
 
-.section-outer {
-}
-
 .section-inner {
   margin: 0 auto;
   width: 1180px;
+
+  @media #{$large-min-1900} {
+    width: 1200px;
+  }
+
   @media #{$tablet} {
     width: 960px;
   }
 
+  @media #{$small-tablet} {
+    width: 750px;
+  }
+
   @media #{$mobile} {
-    width: auto;
+    width: 550px;
   }
 
 }
 
 
-// -- HEADER --
+// -- HEADER -------------------------------------------------------------------------------------------- 1 -
 
 .section-header {
   background: url('../images/screen1.png') no-repeat 50% 50%;
@@ -142,11 +156,17 @@ button:hover {
 }
 
 
-// -- INFO --
+// -- INFO ---------------------------------------------------------------------------------------------- 2 -
 
 .section-info {
   display: flex;
   background: $color-light;
+
+  .section-inner {
+    @media #{$large-min-1900} {
+      margin-left: 0;
+    }
+  }
 
   @media #{$tablet} {
     background: $color-white;
@@ -191,6 +211,11 @@ button:hover {
 
     margin-bottom: 0;
     margin-top: auto;
+
+    @media #{$large-min-1900} {
+      border-width: 0 0 665px 700px;
+    }
+
     @media #{$tablet} {
       display: none;
     }
@@ -199,10 +224,15 @@ button:hover {
 }
 
 
-// -- FEATURES --
+// -- FEATURES -------------------------------------------------------------------------------------------- 3 -
 .section-features {
   background: url('../images/screen3.png') no-repeat 50% 50%;
   background-size: cover;
+
+  @media #{$large-min-1900} {
+    background-color: $color-light;
+    background-size: contain;
+  }
 
   @media #{$tablet} {
     background: $color-light;
@@ -244,10 +274,14 @@ button:hover {
         padding-bottom: 15px;
       }
     }
+
+    @media #{$small-tablet} {
+      flex-direction: column;
+    }
   }
 }
 
-// -- DESIGN --
+// -- DESIGN ---------------------------------------------------------------------------------------------- 4 -
 
 .section-design {
 
@@ -260,6 +294,10 @@ button:hover {
     border-style: solid;
     border-width: 635px 0 0 605px;
     border-color: transparent transparent transparent #fb8686;
+
+    @media #{$large-min-1900} {
+      top: 2390px;
+    }
 
     @media #{$tablet} {
       display: none;
@@ -299,12 +337,16 @@ button:hover {
       .text {
         margin-top: 30px;
       }
+
+      @media #{$tablet} {
+        padding: 140px 120px;
+      }
     }
   }
 }
 
 
-// -- REVIEWS --
+// -- REVIEWS --------------------------------------------------------------------------------------------- 5 --
 .section-reviews {
   background: url('../images/screen6.png') no-repeat;
   background-size: cover;
@@ -345,6 +387,10 @@ button:hover {
         padding-top: 30px;
       }
     }
+
+    @media #{$small-tablet} {
+      flex-direction: column;
+    }
   }
 
   &__logos {
@@ -368,7 +414,7 @@ button:hover {
   }
 }
 
-// -- NEW FEATURES --
+// -- NEW FEATURES ------------------------------------------------------------------------------------------- 6 --
 
 .section-new-features {
   background-color: $color-light;
@@ -413,7 +459,7 @@ button:hover {
 }
 
 
-// -- FORM --
+// -- FORM ---------------------------------------------------------------------------------------------- 7 -
 
 .section-form {
   background: #323969;
@@ -471,6 +517,12 @@ button:hover {
 
       padding-top: 42px;
       padding-left: 57%;
+
+      @media #{$small-tablet} {
+        img, div {
+          display: none
+        }
+      }
     }
 
     &__form {
@@ -503,6 +555,14 @@ button:hover {
           color: white;
         }
       }
+
+      @media #{$small-tablet} {
+        flex-direction: column;
+        input, button {
+          margin-top: 20px;
+        }
+
+      }
     }
 
     &__subtitle {
@@ -514,12 +574,25 @@ button:hover {
 }
 
 
-// -- FOOTER --
+// -- FOOTER -------------------------------------------------------------------------------------------- 8 -
 .section-footer {
   @include exo-medium;
 
+  @media #{$small-tablet} {
+    //display: none
+  }
+
   .section-inner {
     display: flex;
+    @media #{$small-tablet} {
+      flex-direction: column;
+      .triangle3 {
+        display: none
+      }
+      input {
+        width: 60%;
+      }
+    }
   }
 
   &__column {

@@ -325,12 +325,18 @@ button:hover {
 .section-inner {
   margin: 0 auto;
   width: 1180px; }
+  @media (min-width: 1900px) {
+    .section-inner {
+      width: 1200px; } }
   @media only screen and (max-width: 1024px) {
     .section-inner {
       width: 960px; } }
+  @media only screen and (max-width: 768px) {
+    .section-inner {
+      width: 750px; } }
   @media only screen and (max-width: 576px) {
     .section-inner {
-      width: auto; } }
+      width: 550px; } }
 
 .section-header {
   background: url("../images/screen1.png") no-repeat 50% 50%;
@@ -384,6 +390,9 @@ button:hover {
 .section-info {
   display: flex;
   background: #f6f5f3; }
+  @media (min-width: 1900px) {
+    .section-info .section-inner {
+      margin-left: 0; } }
   @media only screen and (max-width: 1024px) {
     .section-info {
       background: white; } }
@@ -414,6 +423,9 @@ button:hover {
     border-color: transparent transparent #fb8686 transparent;
     margin-bottom: 0;
     margin-top: auto; }
+    @media (min-width: 1900px) {
+      .section-info .triangle {
+        border-width: 0 0 665px 700px; } }
     @media only screen and (max-width: 1024px) {
       .section-info .triangle {
         display: none; } }
@@ -424,6 +436,10 @@ button:hover {
   font-family: 'Exo', sans-serif;
   font-weight: 500;
   text-align: center; }
+  @media (min-width: 1900px) {
+    .section-features {
+      background-color: #f6f5f3;
+      background-size: contain; } }
   @media only screen and (max-width: 1024px) {
     .section-features {
       background: #f6f5f3; } }
@@ -447,6 +463,9 @@ button:hover {
         font-size: 22px;
         color: #282828;
         padding-bottom: 15px; }
+    @media only screen and (max-width: 768px) {
+      .section-features-items {
+        flex-direction: column; } }
 
 .section-design .triangle2 {
   position: absolute;
@@ -457,6 +476,9 @@ button:hover {
   border-style: solid;
   border-width: 635px 0 0 605px;
   border-color: transparent transparent transparent #fb8686; }
+  @media (min-width: 1900px) {
+    .section-design .triangle2 {
+      top: 2390px; } }
   @media only screen and (max-width: 1024px) {
     .section-design .triangle2 {
       display: none; } }
@@ -484,6 +506,9 @@ button:hover {
       font-size: 40px; }
     .section-design-content__text .text {
       margin-top: 30px; }
+    @media only screen and (max-width: 1024px) {
+      .section-design-content__text {
+        padding: 140px 120px; } }
 
 .section-reviews {
   background: url("../images/screen6.png") no-repeat;
@@ -516,6 +541,9 @@ button:hover {
         font-style: italic;
         color: white;
         padding-top: 30px; }
+    @media only screen and (max-width: 768px) {
+      .section-reviews__reviews {
+        flex-direction: column; } }
   .section-reviews__logos {
     display: flex;
     justify-content: center;
@@ -592,6 +620,9 @@ button:hover {
         padding-bottom: 17px;
         padding-right: 10px;
         padding-top: 5px; }
+      @media only screen and (max-width: 768px) {
+        .section-form-wrapper__tip img, .section-form-wrapper__tip div {
+          display: none; } }
     .section-form-wrapper__form {
       display: flex; }
       .section-form-wrapper__form-input {
@@ -612,6 +643,11 @@ button:hover {
         background: #ff6d6d;
         padding: 20px 90px;
         color: white; }
+      @media only screen and (max-width: 768px) {
+        .section-form-wrapper__form {
+          flex-direction: column; }
+          .section-form-wrapper__form input, .section-form-wrapper__form button {
+            margin-top: 20px; } }
     .section-form-wrapper__subtitle {
       opacity: 0.6;
       margin-top: 53px;
@@ -622,6 +658,13 @@ button:hover {
   font-weight: 500; }
   .section-footer .section-inner {
     display: flex; }
+    @media only screen and (max-width: 768px) {
+      .section-footer .section-inner {
+        flex-direction: column; }
+        .section-footer .section-inner .triangle3 {
+          display: none; }
+        .section-footer .section-inner input {
+          width: 60%; } }
   .section-footer__column {
     margin-bottom: 90px; }
     .section-footer__column .logo {
