@@ -352,7 +352,6 @@ button:hover {
     .section-header-wrapper__title {
       font-family: 'Exo', sans-serif;
       font-weight: 100;
-      width: 60%;
       font-size: 60px;
       line-height: 75px;
       margin: 0 auto 45px; }
@@ -361,6 +360,13 @@ button:hover {
           font-size: 48px;
           line-height: 60px;
           margin-top: 70px; } }
+      @media (min-width: 600px) {
+        .section-header-wrapper__title {
+          width: 60%; } }
+      @media (max-width: 590px) {
+        .section-header-wrapper__title {
+          padding-left: 20px;
+          padding-right: 20px; } }
     .section-header-wrapper__play-button {
       margin-bottom: 40px;
       cursor: pointer; }
@@ -419,6 +425,9 @@ button:hover {
       font-size: 40px; }
     .section-info-content .text {
       padding-top: 50px; }
+    @media (max-width: 768px) {
+      .section-info-content {
+        padding: 100px 50px 100px 70px; } }
   .section-info .triangle {
     width: 0;
     height: 0;
@@ -449,6 +458,9 @@ button:hover {
       background: #f6f5f3; } }
   .section-features-content {
     padding-top: 137px; }
+    @media (max-width: 650px) {
+      .section-features-content {
+        padding-top: 90px; } }
     .section-features-content .pretitle {
       padding-bottom: 10px; }
     .section-features-content .main-title {
@@ -458,6 +470,9 @@ button:hover {
     margin-top: 80px;
     padding-bottom: 180px;
     display: flex; }
+    @media (max-width: 650px) {
+      .section-features-items {
+        margin-top: 50px; } }
     .section-features-items__item {
       margin: 0 30px; }
       .section-features-items__item .icon {
@@ -504,7 +519,7 @@ button:hover {
       .section-design-content__image {
         display: none; } }
   .section-design-content__text {
-    padding: 140px 50px; }
+    padding: 80px 40px; }
     .section-design-content__text .pretitle {
       padding-bottom: 25px; }
     .section-design-content__text .title {
@@ -517,7 +532,7 @@ button:hover {
       font-size: 40px; }
     .section-design-content__text .text {
       margin-top: 30px; }
-    @media (max-width: 1439px) {
+    @media (min-width: 768px) {
       .section-design-content__text {
         padding: 140px 120px; } }
 
@@ -570,11 +585,13 @@ button:hover {
     opacity: .6; }
     .section-reviews__logos img {
       padding-right: 100px; }
+      @media (max-width: 768px) {
+        .section-reviews__logos img {
+          padding-top: 30px; } }
     @media (max-width: 1439px) {
       .section-reviews__logos {
-        flex-wrap: wrap; }
-        .section-reviews__logos #sienna {
-          padding-top: 30px; } }
+        flex-wrap: wrap;
+        padding-top: 25px; } }
 
 .section-new-features {
   background-color: #f6f5f3; }
@@ -625,6 +642,9 @@ button:hover {
       font-family: 'Exo', sans-serif;
       font-weight: 500;
       font-size: 40px; }
+      @media (max-width: 768px) {
+        .section-form-wrapper__title {
+          padding: 0 10px; } }
     .section-form-wrapper__tip {
       padding-top: 42px;
       padding-left: 57%; }
@@ -653,6 +673,9 @@ button:hover {
           padding: 20px 28px; }
           .section-form-wrapper__form-input input::placeholder {
             color: #ffffff; }
+        @media (max-width: 650px) {
+          .section-form-wrapper__form-input {
+            padding-left: 30px; } }
       .section-form-wrapper__form-button button {
         cursor: pointer;
         border: none;
@@ -660,7 +683,7 @@ button:hover {
         background: #ff6d6d;
         padding: 20px 90px;
         color: white; }
-      @media (max-width: 768px) {
+      @media (max-width: 950px) {
         .section-form-wrapper__form {
           flex-direction: column; }
           .section-form-wrapper__form input, .section-form-wrapper__form button {
@@ -675,7 +698,7 @@ button:hover {
   font-weight: 500; }
   .section-footer .section-inner {
     display: flex; }
-    @media (max-width: 768px) {
+    @media (max-width: 950px) {
       .section-footer .section-inner {
         flex-direction: column; }
         .section-footer .section-inner .triangle3 {
@@ -747,7 +770,7 @@ button:hover {
     @media (min-width: 769px) {
       .section-footer__column-social {
         text-align: center; } }
-  @media (min-width: 769px) {
+  @media (min-width: 900px) {
     .section-footer__column {
       margin-bottom: 90px; } }
   .section-footer .triangle3 {
@@ -767,6 +790,10 @@ button:hover {
     @media (max-width: 768px) {
       .section-footer .column1 {
         margin-left: 30px; } }
+    @media (max-width: 670px) {
+      .section-footer .column1 {
+        padding: 0;
+        margin: 0; } }
   .section-footer .column2 {
     padding-left: 40px; }
     @media (max-width: 1439px) {
@@ -776,6 +803,10 @@ button:hover {
       .section-footer .column2 {
         margin-left: 10px;
         margin-top: 60px; } }
+    @media (max-width: 670px) {
+      .section-footer .column2 {
+        padding: 0;
+        margin: 0; } }
   .section-footer .column3 {
     padding-left: 100px; }
     @media (max-width: 1439px) {
@@ -785,6 +816,10 @@ button:hover {
       .section-footer .column3 {
         margin-left: 30px;
         margin-top: 60px; } }
+    @media (max-width: 670px) {
+      .section-footer .column3 {
+        padding: 0;
+        margin: 0; } }
   @media (max-width: 768px) {
     .section-footer .column4 {
       margin-bottom: 40px;
@@ -795,3 +830,8 @@ button:hover {
       padding-left: 90px; } }
   .section-footer .footer_wrapper {
     display: flex; }
+    @media (max-width: 670px) {
+      .section-footer .footer_wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 90px; } }
