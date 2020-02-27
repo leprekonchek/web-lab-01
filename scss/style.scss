@@ -23,15 +23,8 @@ $color-dark-gray: #282828;
 $color-light: #f6f5f3;
 $color-avatar: #4e4e5e;
 
-$mobile: 'only screen and (max-width : 576px)';
-$small-tablet: 'only screen and (max-width : 768px)';
-$tablet: 'only screen and (max-width : 1024px)';
-
 // 320 - 576 - 768 - 1024 - 1900
-$xsmall-max-320: '(max-width : 320px)';
-$small-max-576: '(max-width : 576px)';
-$medium-max-768: '(max-width : 768px)';
-$large-max-1024: '(max-width : 1024px)';
+$large-max-1439: '(max-width : 1439px)';
 $large-min-1900: '(min-width : 1900px)';
 
 
@@ -60,22 +53,17 @@ button:hover {
 
 .section-inner {
   margin: 0 auto;
-  width: 1180px;
 
-  @media #{$large-min-1900} {
+  @media (min-width: 1440px) {
+    width: 1180px;
+  }
+
+  @media (min-width: 1900px) {
     width: 1200px;
   }
 
-  @media #{$tablet} {
+  @media (min-width: 1024px) and (max-width: 1439px) {
     width: 960px;
-  }
-
-  @media #{$small-tablet} {
-    width: 750px;
-  }
-
-  @media #{$mobile} {
-    width: 550px;
   }
 
 }
@@ -115,6 +103,12 @@ button:hover {
       font-size: 60px;
       line-height: 75px;
       margin: 0 auto 45px;
+
+      @media (max-width: 768px) {
+        font-size: 48px;
+        line-height: 60px;
+        margin-top: 70px;
+      }
     }
 
     &__play-button {
@@ -150,6 +144,9 @@ button:hover {
       @include exo-regular;
       font-size: 14px;
       margin-top: 20px;
+      @media (max-width: 768px) {
+        margin-top: 10px;
+      }
     }
 
   }
@@ -168,7 +165,7 @@ button:hover {
     }
   }
 
-  @media #{$tablet} {
+  @media #{$large-max-1439} {
     background: $color-white;
   }
 
@@ -216,7 +213,7 @@ button:hover {
       border-width: 0 0 665px 700px;
     }
 
-    @media #{$tablet} {
+    @media #{$large-max-1439} {
       display: none;
     }
   }
@@ -234,7 +231,7 @@ button:hover {
     background-size: contain;
   }
 
-  @media #{$tablet} {
+  @media #{$large-max-1439} {
     background: $color-light;
   }
 
@@ -261,7 +258,6 @@ button:hover {
     display: flex;
 
     &__item {
-      width: 30%;
       margin: 0 30px;
 
       .icon {
@@ -273,11 +269,23 @@ button:hover {
         color: $color-dark-gray;
         padding-bottom: 15px;
       }
+
+      @media (min-width: 769px) {
+        width: 30%;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
+        margin-top: 50px;
+      }
     }
 
-    @media #{$small-tablet} {
+    @media (max-width: 768px) {
       flex-direction: column;
+      align-items: center;
     }
+
+
   }
 }
 
@@ -299,7 +307,7 @@ button:hover {
       top: 2390px;
     }
 
-    @media #{$tablet} {
+    @media #{$large-max-1439} {
       display: none;
     }
   }
@@ -310,7 +318,7 @@ button:hover {
 
     &__image {
       padding: 90px 0;
-      @media #{$tablet} {
+      @media #{$large-max-1439} {
         display: none;
       }
     }
@@ -338,7 +346,7 @@ button:hover {
         margin-top: 30px;
       }
 
-      @media #{$tablet} {
+      @media #{$large-max-1439} {
         padding: 140px 120px;
       }
     }
@@ -357,7 +365,6 @@ button:hover {
     text-align: center;
 
     .review {
-      width: 25%;
       padding-top: 110px;
       margin: 0 51px;
 
@@ -386,10 +393,19 @@ button:hover {
         color: white;
         padding-top: 30px;
       }
+
+      @media (min-width: 769px) {
+        width: 25%;
+      }
+
+      @media (max-width: 768px) {
+        width: 60%;
+      }
     }
 
-    @media #{$small-tablet} {
+    @media (max-width: 768px) {
       flex-direction: column;
+      align-items: center;
     }
   }
 
@@ -405,7 +421,7 @@ button:hover {
       padding-right: 100px;
     }
 
-    @media #{$tablet} {
+    @media #{$large-max-1439} {
       flex-wrap: wrap;
       #sienna {
         padding-top: 30px;
@@ -450,7 +466,7 @@ button:hover {
     }
 
     &__image {
-      @media #{$tablet} {
+      @media #{$large-max-1439} {
         display: none;
       }
     }
@@ -518,7 +534,7 @@ button:hover {
       padding-top: 42px;
       padding-left: 57%;
 
-      @media #{$small-tablet} {
+      @media (max-width: 768px) {
         img, div {
           display: none
         }
@@ -556,7 +572,7 @@ button:hover {
         }
       }
 
-      @media #{$small-tablet} {
+      @media (max-width: 768px) {
         flex-direction: column;
         input, button {
           margin-top: 20px;
@@ -578,13 +594,9 @@ button:hover {
 .section-footer {
   @include exo-medium;
 
-  @media #{$small-tablet} {
-    //display: none
-  }
-
   .section-inner {
     display: flex;
-    @media #{$small-tablet} {
+    @media (max-width: 768px) {
       flex-direction: column;
       .triangle3 {
         display: none
@@ -596,7 +608,6 @@ button:hover {
   }
 
   &__column {
-    margin-bottom: 90px;
 
     .logo {
       margin-bottom: 10px;
@@ -606,7 +617,14 @@ button:hover {
     &-title {
       font-size: 22px;
       margin-bottom: 27px;
-      margin-top: 95px;
+
+      @media (min-width: 769px) {
+        margin-top: 95px;
+      }
+
+      @media (max-width: 768px) {
+        margin-top: 30px;
+      }
     }
 
     .text {
@@ -647,7 +665,7 @@ button:hover {
           color: rgba(141, 141, 141, .4);
         }
 
-        @media #{$tablet} {
+        @media #{$large-max-1439} {
           width: 85%;
         }
       }
@@ -666,13 +684,23 @@ button:hover {
     }
 
     &-social {
-      text-align: center;
-      padding-left: 40px;
       opacity: .5;
 
       img {
         padding: 0 13px;
       }
+
+      @media (min-width: 1440px) {
+        padding-left: 40px;
+      }
+
+      @media (min-width: 769px) {
+        text-align: center;
+      }
+    }
+
+    @media (min-width: 769px) {
+      margin-bottom: 90px;
     }
 
   }
@@ -688,24 +716,58 @@ button:hover {
     right: 0;
     z-index: -2;
 
-    @media #{$tablet} {
+    @media #{$large-max-1439} {
       display: none;
     }
+
   }
 
   .column1 {
     padding-left: 60px;
+    @media (max-width: 768px) {
+      margin-left: 30px;
+    }
   }
 
   .column2 {
     padding-left: 40px;
+
+    @media #{$large-max-1439} {
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 10px;
+      margin-top: 60px;
+    }
   }
 
   .column3 {
     padding-left: 100px;
+
+    @media #{$large-max-1439} {
+      padding-left: 50px;
+    }
+
+    @media (max-width: 768px) {
+      margin-left: 30px;
+      margin-top: 60px;
+    }
   }
 
   .column4 {
-    padding-left: 90px;
+    @media (max-width: 768px) {
+      margin-bottom: 40px;
+      margin-top: 20px;
+      padding-left: 15%;
+    }
+
+    @media (min-width: 769px) {
+      padding-left: 90px;
+    }
+  }
+
+  .footer_wrapper {
+    display: flex;
   }
 }
