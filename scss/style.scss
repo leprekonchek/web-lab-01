@@ -34,7 +34,13 @@ $large-min-1900: '(min-width : 1900px)';
 }
 
 button:hover {
-  background: #db5f5f;
+  background-color: #db5f5f;
+  box-shadow: 0 15px 20px rgba(40, 40, 40, 0.2);
+  transform: translateY(-1px);
+}
+
+a {
+  text-decoration: none;
 }
 
 .text {
@@ -132,7 +138,13 @@ button:hover {
         width: 60px;
         height: 60px;
       }
+
+      img:hover {
+        box-shadow: 0 15px 20px rgba(40, 40, 40, 0.2);
+        transform: translateY(-1px);
+      }
     }
+
 
     &__try-button {
       @include exo-regular;
@@ -335,13 +347,13 @@ button:hover {
     z-index: -1;
     width: 0;
     height: 0;
-    top: 2240px;
+    top: 2340px;
     border-style: solid;
     border-width: 635px 0 0 605px;
     border-color: transparent transparent transparent #fb8686;
 
     @media #{$large-min-1900} {
-      top: 2390px;
+      top: 2510px;
     }
 
     @media #{$large-max-1439} {
@@ -617,6 +629,10 @@ button:hover {
           &::placeholder {
             color: #ffffff;
           }
+        }
+
+        input:focus {
+          color: $color-white;
         }
 
         @media (max-width: 650px) {

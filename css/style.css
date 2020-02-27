@@ -307,7 +307,12 @@ template {
   box-sizing: border-box; }
 
 button:hover {
-  background: #db5f5f; }
+  background-color: #db5f5f;
+  box-shadow: 0 15px 20px rgba(40, 40, 40, 0.2);
+  transform: translateY(-1px); }
+
+a {
+  text-decoration: none; }
 
 .text {
   font-size: 16px;
@@ -377,6 +382,9 @@ button:hover {
       .section-header-wrapper__play-button img {
         width: 60px;
         height: 60px; }
+      .section-header-wrapper__play-button img:hover {
+        box-shadow: 0 15px 20px rgba(40, 40, 40, 0.2);
+        transform: translateY(-1px); }
     .section-header-wrapper__try-button {
       font-family: 'Exo', sans-serif;
       font-weight: 400;
@@ -511,13 +519,13 @@ button:hover {
   z-index: -1;
   width: 0;
   height: 0;
-  top: 2240px;
+  top: 2340px;
   border-style: solid;
   border-width: 635px 0 0 605px;
   border-color: transparent transparent transparent #fb8686; }
   @media (min-width: 1900px) {
     .section-design .triangle2 {
-      top: 2390px; } }
+      top: 2510px; } }
   @media (max-width: 1439px) {
     .section-design .triangle2 {
       display: none; } }
@@ -698,6 +706,8 @@ button:hover {
           padding: 20px 28px; }
           .section-form-wrapper__form-input input::placeholder {
             color: #ffffff; }
+        .section-form-wrapper__form-input input:focus {
+          color: white; }
         @media (max-width: 650px) {
           .section-form-wrapper__form-input {
             padding-left: 30px; } }
