@@ -367,6 +367,10 @@ button:hover {
         .section-header-wrapper__title {
           padding-left: 20px;
           padding-right: 20px; } }
+      @media (max-width: 390px) {
+        .section-header-wrapper__title {
+          font-size: 40px;
+          line-height: 50px; } }
     .section-header-wrapper__play-button {
       margin-bottom: 40px;
       cursor: pointer; }
@@ -419,6 +423,9 @@ button:hover {
       font-size: 40px;
       color: #282828;
       display: inline; }
+      @media (max-width: 390px) {
+        .section-info-content .title {
+          font-size: 32px; } }
     .section-info-content .dots {
       display: inline;
       color: #ff6d6d;
@@ -466,6 +473,9 @@ button:hover {
     .section-features-content .main-title {
       font-size: 40px;
       color: #282828; }
+      @media (max-width: 390px) {
+        .section-features-content .main-title {
+          font-size: 32px; } }
   .section-features-items {
     margin-top: 80px;
     padding-bottom: 180px;
@@ -473,6 +483,9 @@ button:hover {
     @media (max-width: 650px) {
       .section-features-items {
         margin-top: 50px; } }
+    @media (max-width: 390px) {
+      .section-features-items {
+        margin-top: 20px; } }
     .section-features-items__item {
       margin: 0 30px; }
       .section-features-items__item .icon {
@@ -526,6 +539,9 @@ button:hover {
       font-size: 40px;
       color: #282828;
       display: inline; }
+      @media (max-width: 390px) {
+        .section-design-content__text .title {
+          font-size: 32px; } }
     .section-design-content__text .dots {
       display: inline;
       color: #ff6d6d;
@@ -547,6 +563,9 @@ button:hover {
     .section-reviews__reviews .review {
       padding-top: 110px;
       margin: 0 51px; }
+      @media (max-width: 390px) {
+        .section-reviews__reviews .review {
+          padding-top: 70px; } }
       .section-reviews__reviews .review .avatar {
         margin: 0 auto;
         width: 76px;
@@ -610,6 +629,9 @@ button:hover {
       line-height: 50px;
       color: #282828;
       margin-bottom: 50px; }
+      @media (max-width: 390px) {
+        .section-new-features-wrapper__title {
+          font-size: 32px; } }
     .section-new-features-wrapper__text {
       width: 55%;
       margin: 0 auto 90px; }
@@ -645,6 +667,9 @@ button:hover {
       @media (max-width: 768px) {
         .section-form-wrapper__title {
           padding: 0 10px; } }
+      @media (max-width: 390px) {
+        .section-form-wrapper__title {
+          font-size: 32px; } }
     .section-form-wrapper__tip {
       padding-top: 42px;
       padding-left: 57%; }
